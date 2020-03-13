@@ -60,4 +60,38 @@ public class Book {
         }
         return names.toString();
     }
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Book book = (Book) o;
+
+        if (Double.compare(book.price, price) != 0) return false;
+        if (qty != book.qty) return false;
+        if (name != null ? !name.equals(book.name) : book.name != null) return false;
+        if (authors.length!=book.authors.length) return false;
+        int count=0;
+        for (Author author : authors) {
+            for (Author author1:book.authors) {
+                if (author.equals(author1)) {
+                    count++;
+                    break;
+                }
+            }
+        }
+        return count==authors.length;
+    }
+
+    @Override
+    public int hashCode() {
+        int result;
+        long temp;
+        result = name != null ? name.hashCode() : 0;
+        result = 31 * result + Arrays.hashCode(authors);
+        temp = Double.doubleToLongBits(price);
+        result = 31 * result + (int) (temp ^ (temp >>> 32));
+        result = 31 * result + qty;
+        return result;
+    }
 }
