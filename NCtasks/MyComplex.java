@@ -95,4 +95,25 @@ public class MyComplex {
     public MyComplex conjugate(){
         return new MyComplex(real,-imag);
     }
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        MyComplex myComplex = (MyComplex) o;
+
+        if (Double.compare(myComplex.real, real) != 0) return false;
+        return Double.compare(myComplex.imag, imag) == 0;
+    }
+
+    @Override
+    public int hashCode() {
+        int result;
+        long temp;
+        temp = Double.doubleToLongBits(real);
+        result = (int) (temp ^ (temp >>> 32));
+        temp = Double.doubleToLongBits(imag);
+        result = 31 * result + (int) (temp ^ (temp >>> 32));
+        return result;
+    }
 }
