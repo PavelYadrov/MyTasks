@@ -45,4 +45,37 @@ public class MyTriangle {
         else type = "Scalene";
         return type;
     }
+    //Check of the 3rd sign of quality of triangles
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        MyTriangle that = (MyTriangle) o;
+        if (this.getType()!=that.getType()) return false;
+        boolean answer = false;
+        double[] firstTriangle= new double[]{v1.distance(v2),v2.distance(v3),v3.distance(v1)};
+        double[] secondTriangle= new double[]{that.v1.distance(that.v2),that.v2.distance(that.v3),that.v3.distance(that.v1)};
+        int count =0;
+        for (int k = 0; k < 3; k++) {
+            for (int j=0;j<firstTriangle.length;j++) {
+                if (secondTriangle[k]==firstTriangle[j]) {
+                    firstTriangle[j]=0.0;
+                    count++;
+                    break;
+                }
+            }
+            if (count==3) answer=true;
+        }
+
+        return answer;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = v1 != null ? v1.hashCode() : 0;
+        result = 31 * result + (v2 != null ? v2.hashCode() : 0);
+        result = 31 * result + (v3 != null ? v3.hashCode() : 0);
+        return result;
+    }
 }
