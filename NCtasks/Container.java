@@ -40,4 +40,23 @@ public class Container {
          if (((ball.getX()+ball.getRadius())<x2)&&((ball.getX()-ball.getRadius())>x1)) collidesHeight=true;
          return collidesWidth&&collidesHeight;
     }
+    //Compare containers by area omitting their position
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Container container = (Container) o;
+
+        return this.getHeight()*this.getWidth() == container.getHeight()*container.getWidth();
+    }
+
+    @Override
+    public int hashCode() {
+        int result = x1;
+        result = 31 * result + y1;
+        result = 31 * result + x2;
+        result = 31 * result + y2;
+        return result;
+    }
 }
