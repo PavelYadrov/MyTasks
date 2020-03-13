@@ -69,4 +69,25 @@ public class Ball {
     public String toString() {
         return "\"Ball[("+x+","+y+"),speed=("+xDelta+","+yDelta+")]\"";
     }
+    //I decided to compare balls like real objects
+    //so it means that I only compare their areas omitting their position in space and movement
+    //I think from a physical point of view, this is the most accurate comparison of two objects
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Ball ball = (Ball) o;
+        return radius*radius*Math.PI == ball.radius*ball.radius*Math.PI;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = (x != +0.0f ? Float.floatToIntBits(x) : 0);
+        result = 31 * result + (y != +0.0f ? Float.floatToIntBits(y) : 0);
+        result = 31 * result + (xDelta != +0.0f ? Float.floatToIntBits(xDelta) : 0);
+        result = 31 * result + (yDelta != +0.0f ? Float.floatToIntBits(yDelta) : 0);
+        result = 31 * result + radius;
+        return result;
+    }
 }
