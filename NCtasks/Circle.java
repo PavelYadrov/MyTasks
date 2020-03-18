@@ -1,4 +1,4 @@
-package com.tasks.pavelyadrov;
+package com.task1.pavelyadrov;
 
 public class Circle {
     private double radius =1.0;
