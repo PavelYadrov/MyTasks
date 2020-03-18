@@ -1,4 +1,4 @@
-package com.tasks.pavelyadrov;
+package com.task3.pavelyadrov;
 
 public class Employee {
     private int id;
