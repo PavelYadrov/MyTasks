@@ -106,6 +106,13 @@ public class Main {
             System.out.println("\nFifteenth exercise ");
             System.out.println("Print for clarity");
             System.out.println(Utils.pascalsTriangle(6));
+            
+            //Sixteenth exercise
+             System.out.println("\nSixteenth exercise ");
+            //Static method from Utils Class
+            System.out.println(Utils.average(3));
+            //With console input
+            System.out.println(Utils.average(bf.readLine()));
        
         }
         catch (IOException e){
