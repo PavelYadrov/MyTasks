@@ -19,7 +19,7 @@ public class Utils {
         }
         return fact;
     }
-    //Exrcice 15
+    //Exrcise 15
         public static ArrayList<ArrayList<Integer>> pascalsTriangle(int n){
         ArrayList<ArrayList<Integer>> pascalsTriangle = new ArrayList<>();
         int count=0;
@@ -34,6 +34,29 @@ public class Utils {
         }
             System.out.println("ArrayList inside ArrayList below");
         return pascalsTriangle;
+    }
+    
+    //Exercise 16
+     public static double average(double... values){
+        double result =0.0;
+        for(double val:values){
+            result+=val;
+        }
+        return result/values.length;
+    }
+    
+    //Exercise 16
+    public static double average(String values){
+        String[] strings = values.split("\\s+");
+        double[] numbers = new double[strings.length];
+        for (int i = 0; i < strings.length; i++) {
+            numbers[i]=Double.parseDouble(strings[i]);
+        }
+        double result =0.0;
+        for(double val:numbers){
+            result+=val;
+        }
+        return result/numbers.length;
     }
     
 }
