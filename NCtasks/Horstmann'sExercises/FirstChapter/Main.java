@@ -100,6 +100,13 @@ public class Main {
             MagicSquare magicSquare = new MagicSquare(3);
             magicSquare.myPrint();
             magicSquare.magicalTest();
+            
+            //Fifteenth exercise
+            //Static method from Utils Class
+            System.out.println("\nFifteenth exercise ");
+            System.out.println("Print for clarity");
+            System.out.println(Utils.pascalsTriangle(6));
+       
         }
         catch (IOException e){
             System.out.println("IOException");
@@ -109,8 +116,6 @@ public class Main {
             System.out.println("Another exception");
             e.printStackTrace();
         }
-
-
 
     }
 }
