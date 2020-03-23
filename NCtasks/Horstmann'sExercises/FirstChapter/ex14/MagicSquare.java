@@ -18,7 +18,7 @@ public class MagicSquare {
         System.out.println("Fill the array with size "+n+"x"+n);
         for (int[] mas:matrix) {
             String check = bf.readLine();
-            if (check.equals(""))  {
+            if ("".equals(check))  {
                 System.out.println("end of InputStream");
                 break;
             }
