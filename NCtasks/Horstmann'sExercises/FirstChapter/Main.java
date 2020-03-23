@@ -78,7 +78,7 @@ public class Main {
             System.out.println("\nNinth exercise");
             String s1 = new String("World");
             String s2 = "World";
-            System.out.println(s1.equals(s2) + " - equals  ");
+            System.out.println(s2.equals(s1) + " - equals  ");
             System.out.print(s1 == s2);
             System.out.println(" - == ");
 
