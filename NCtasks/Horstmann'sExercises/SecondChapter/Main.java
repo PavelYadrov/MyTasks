@@ -25,6 +25,13 @@ public class Main {
             car.drive(150);
             car.refill(3.4);
             System.out.println(car);
+            
+            //Fifteenth exercise
+            System.out.println("\nFifteenth exercise");
+            Invoice invoice = new Invoice();
+            invoice.addItem("first",123,33);
+            invoice.addItem("second",13,12);
+            System.out.println(invoice);
         }
         catch (IOException e){
             System.out.println("IOException");
