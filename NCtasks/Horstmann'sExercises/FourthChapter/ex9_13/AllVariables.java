@@ -80,12 +80,12 @@ public interface AllVariables {
     }
 
     //Thirteenth exercise
-    static List<Double> table(Method method, double lower, double upper, double step){
-        List<Double> results = new ArrayList<>();
+    static List<Object> table(Method method, double lower, double upper, double step){
+        List<Object> results = new ArrayList<>();
         double current=lower;
         try {
             while (current <= upper) {
-                results.add((Double) method.invoke(null, current));
+                results.add(method.invoke(null, current));
                 current+=step;
             }
         }
