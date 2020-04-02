@@ -12,7 +12,7 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args)  {
-/*
+
         //First ercise
         System.out.println("First exercise");
         Measurable[] empls = new Measurable[]{
@@ -76,18 +76,18 @@ public class Main {
 
         //Twelfth exercise
         System.out.println("\nTwelfth exercise");
-        System.out.println(Arrays.toString(IFilePath.allNames("B://загрузк", (file,name)-> name.toLowerCase().endsWith(".zip"))));
+        System.out.println(Arrays.toString(IFilePath.allNames("B://Г§Г ГЈГ°ГіГ§ГЄ", (file,name)-> name.toLowerCase().endsWith(".zip"))));
 
 
 
         //Thirteenth exercise
-        //Preparation
+        //Preparation before exercise - gathering directions and files
         System.out.println("\nThirteenth exercise");
         List<File> fils = new ArrayList<>();
-        fils.addAll(Arrays.asList(IFilePath.allNames("B://загрузк", (file,name)-> name.toLowerCase().endsWith(".zip"))));
-        fils.addAll(Arrays.asList(IFilePath.allNames("B://загрузк//Gothic 3 mod's//Gothic 3 mod's", (file,name)-> name.toLowerCase().endsWith(".exe"))));
-        fils.addAll(Arrays.asList(IFilePath.allPathes("B://загрузк//Gothic 3 mod's//Gothic 3 mod's", file -> file.isDirectory())));
-        fils.addAll(Arrays.asList(IFilePath.allPathes("B://загрузк//", file -> file.isDirectory())));
+        fils.addAll(Arrays.asList(IFilePath.allNames("B://Gothic 3, (file,name)-> name.toLowerCase().endsWith(".zip"))));
+        fils.addAll(Arrays.asList(IFilePath.allNames("B://Gothic 3//Gothic 3 mod's//Gothic 3 mod's", (file,name)-> name.toLowerCase().endsWith(".exe"))));
+        fils.addAll(Arrays.asList(IFilePath.allPathes("B://Gothic 3//Gothic 3 mod's//Gothic 3 mod's", file -> file.isDirectory())));
+        fils.addAll(Arrays.asList(IFilePath.allPathes("B://Gothic 3//", file -> file.isDirectory())));
         Collections.shuffle(fils);
         System.out.println(fils);
         ///Execution
@@ -97,7 +97,7 @@ public class Main {
             else return File1.compareTo(File2);
         }));
 
- */
+ 
         //Fourteenth exercise
         System.out.println("\nFifteenth exercise");
         IFilePath.methodRun(new Greeter(3,"Soup"),new Greeter(3,"Meow"),new Greeter(3,"Trylyalya"),new Greeter(3,"Daaaam")).run();
