@@ -46,4 +46,9 @@ public class Main {
 
         dia.algorithm(map,0);
     }
+        //Seventh Exercise
+        System.out.println("\nSeventh Exercise");
+        WarAndPeace wp = new WarAndPeace("B:\\myNCprojects\\HorstmanExercises\\Tolstoy Leo. War and Peace.txt");
+        wp.algorithm();
+       wp.answer();
 }
