@@ -33,7 +33,7 @@ public class MyLinkedList<T> implements ILinkedList<T> {
         }
     }
 
-    // Надо переопределить методы самого итератора
+    // ГЌГ Г¤Г® ГЇГҐГ°ГҐГ®ГЇГ°ГҐГ¤ГҐГ«ГЁГІГј Г¬ГҐГІГ®Г¤Г» Г±Г Г¬Г®ГЈГ® ГЁГІГҐГ°Г ГІГ®Г°Г 
     public Iterator<T> iterator() {
         return new Iterator<T>() {
             private Node<T> lastReturned;
@@ -206,6 +206,13 @@ public class MyLinkedList<T> implements ILinkedList<T> {
      */
     @Override
     public void clear() {
+        for (Node<T> x = first; x != null; ) {
+            Node<T> next = x.next;
+            x.item = null;
+            x.next = null;
+            x.prev = null;
+            x = next;
+        }
         size=0;
         last=first=null;
     }
