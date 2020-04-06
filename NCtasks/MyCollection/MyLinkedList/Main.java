@@ -11,7 +11,7 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) {
-        /*MyLinkedList<MyComplex> mycol = new MyLinkedList<>();
+        MyLinkedList<MyComplex> mycol = new MyLinkedList<>();
         mycol.add(new MyComplex(3,5));
         mycol.add(new MyComplex(2,1));
         mycol.add(new MyComplex(5,3));
@@ -36,7 +36,7 @@ public class Main {
         mycol1.remove(1);
         mycol1.indexOf(new MyComplex(2,2));
         //well they worked correctly after all
-*/
+
         //Compare MyLinkedList and LinkedList
         double res=0;
         for (int i=0;i<100;i++) {
