@@ -50,5 +50,8 @@ public class Main {
         System.out.println("\nSeventh Exercise");
         WarAndPeace wp = new WarAndPeace("B:\\myNCprojects\\HorstmanExercises\\Tolstoy Leo. War and Peace.txt");
         wp.algorithm();
-       wp.answer();
+        wp.answer();
+        //Eighth exercise
+        wp.algorithmLines();
+        wp.wordsInLines();
 }
