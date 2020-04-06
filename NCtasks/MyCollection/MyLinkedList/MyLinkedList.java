@@ -33,7 +33,7 @@ public class MyLinkedList<T> implements ILinkedList<T> {
         }
     }
 
-    // Íàäî ïåðåîïðåäåëèòü ìåòîäû ñàìîãî èòåðàòîðà
+  
     public Iterator<T> iterator() {
         return new Iterator<T>() {
             private Node<T> lastReturned;
@@ -66,7 +66,7 @@ public class MyLinkedList<T> implements ILinkedList<T> {
         return this.size;
     }
 
-    //Key method for all others
+    
     private Node<T> node(int index) {
         if (index < (size >> 1)) {
             Node<T> x = first;
