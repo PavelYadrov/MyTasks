@@ -43,12 +43,41 @@ public class WarAndPeace {
 
     public TreeMap<String, Integer> getWords() {
         return words;
+        
+        //Eighth Exercise
+         public void algorithmLines(){
+        int i=0;
+        for (String s : text) {
+            Set<Integer> st = new HashSet<>();
+            String[] line = s.replaceAll("[^a-zA-Z0-9]", " ").split("\\s");
+            for (String word : line) {
+                if(wLines.containsKey(word)){
+                    wLines.get(word).add(i);
+                }
+                else{
+                    Set<Integer> ss = new HashSet<>();
+                    wLines.put(word,ss);
+                    wLines.get(word).add(i);
+                }
+            }
+            i++;
+        }
+    }
+        
+        
     }
     public void answer(){
         for(Map.Entry entry:words.entrySet()){
             Object key = entry.getKey();
             Object val= entry.getValue();
             System.out.println("Word - "+key+" quantity - "+ val);
+        }
+    }
+    ublic void wordsInLines(){
+        for(Map.Entry entry:wLines.entrySet()){
+            Object key = entry.getKey();
+            Object val = entry.getValue();
+            System.out.println("Word - "+key+" quantity - "+ val.toString());
         }
     }
 }
