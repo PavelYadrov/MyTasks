@@ -199,11 +199,7 @@ public class MyLinkedList<T> implements ILinkedList<T> {
         return a;
     }
 
-    /**
-     * Clearing all of the links between nodes is "unnecessary"
-     * that's what they said
-     * so lets try
-     */
+ 
     @Override
     public void clear() {
         for (Node<T> x = first; x != null; ) {
