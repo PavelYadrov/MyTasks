@@ -12,7 +12,7 @@ public class Main {
         //THERE IS ONLY 1 STREAM FOR ALL CLASSES AND IT MAY CAUSE IllegalStateException FOR GROUP TEST
 
         Tokens tokens = new Tokens("B:\\myNCprojects\\HorstmanExercises\\Tolstoy Leo. War and Peace.txt");
-        /*
+        
         //Seventh exercise
         System.out.println(tokens.getHundred());
 
@@ -40,7 +40,13 @@ public class Main {
         doubleList.add(5.0);
         double average = doubleList.stream().reduce((s1,s2)-> (s1+s2)/2).orElse(0.0);
         System.out.println(average);
-*/
+        
+        //Sixteenth exercise
+        public static Set<BigInteger> primes(){
+        return Stream.iterate(BigInteger.probablePrime(165, new Random()), n-> n.add(BigInteger.TWO))
+                .parallel().filter(num->num.isProbablePrime(1)).limit(500).collect(Collectors.toSet());
+    }
+       
         //Seventeenth exercise
         System.out.println(tokens.fiveHundredStrings());
 
