@@ -105,6 +105,12 @@ public class Tokens {
         }
         return maxLen.get(max);
     }
+     
+     //Sixteenth exercise
+    public static Set<BigInteger> primes(){
+        return Stream.iterate(BigInteger.probablePrime(165, new Random()), n-> n.add(BigInteger.ONE))
+                .parallel().filter(num->num.isProbablePrime(1)).limit(500).collect(Collectors.toSet());
+    }
 
     //Seventeenth exercise
     public List<String> fiveHundredStrings() {
