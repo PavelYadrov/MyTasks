@@ -42,10 +42,7 @@ public class Main {
         System.out.println(average);
         
         //Sixteenth exercise
-        public static Set<BigInteger> primes(){
-        return Stream.iterate(BigInteger.probablePrime(165, new Random()), n-> n.add(BigInteger.TWO))
-                .parallel().filter(num->num.isProbablePrime(1)).limit(500).collect(Collectors.toSet());
-    }
+        System.out.println(Tokens.primes());
        
         //Seventeenth exercise
         System.out.println(tokens.fiveHundredStrings());
