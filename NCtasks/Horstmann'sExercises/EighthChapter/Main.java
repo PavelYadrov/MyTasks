@@ -15,6 +15,12 @@ public class Main {
         
         //Seventh exercise
         System.out.println(tokens.getHundred());
+        
+        //Eighth exercise
+        List<Object> bh = new ArrayList<>();
+        IntStream.range(100,10000).mapToObj(Optional::of).map(op -> op.filter(x -> x % 2 == 0))
+                .flatMap(Stream::of).forEach(s->s.ifPresent(bh::add));
+        System.out.println(bh);
 
         //Ninth exercise
         System.out.println(tokens.getFive());
